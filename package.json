@@ -3,10 +3,13 @@
   "version": "1.0.0",
   "private": false,
   "description": "Carosell build with Custom elements",
-  "main": "WebSliderImage.js",
+  "main": "web-imageslider.js",
+  "module": "web-imageslider.js",
   "repository": "webharmony/web-imageslider",
   "scripts": {
     "build": "tsc",
+    "tsc:watch": "tsc --watch",
+    "serve": "tsc:watch && polymer serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {
@@ -16,6 +19,14 @@
   "homepage": "https://webharmony.dev/components/web-imageslider",
   "license": "ISC",
   "dependencies": {
+    "@webcomponents/webcomponentsjs": "^2.2.8",
     "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "del": "^4.1.0",
+    "google-closure-compiler-js": "^20190325.0.0",
+    "gulp": "^4.0.0",
+    "gulpclass": "^0.2.0",
+    "ts-node": "^8.0.3"
   }
 }

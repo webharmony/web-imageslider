@@ -1,12 +1,22 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
-    "noImplicitAny": true,
+    "experimentalDecorators": true,
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext",
+      "dom"
+    ],
     "removeComments": true,
-    "preserveConstEnums": true,
+    "outDir": "lib",
     "sourceMap": true,
-    "outDir": "build",
-    "experimentalDecorators": true
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "configFile": "./tslint.json"
+      }
+    ]
   },
   "include": [
     "src/**/*"
