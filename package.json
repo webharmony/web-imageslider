@@ -1,0 +1,21 @@
+{
+  "name": "@webharmony/web-imageslider",
+  "version": "1.0.0",
+  "private": false,
+  "description": "Carosell build with Custom elements",
+  "main": "WebSliderImage.js",
+  "repository": "webharmony/web-imageslider",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Sebastian Muszyński",
+    "email": "kontakt@webharmony.dev"
+  },
+  "homepage": "https://webharmony.dev/components/web-imageslider",
+  "license": "ISC",
+  "dependencies": {
+    "lit-element": "^2.1.0"
+  }
+}
