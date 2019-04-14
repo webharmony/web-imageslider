@@ -9,7 +9,7 @@
   "scripts": {
     "build": "tsc",
     "tsc:watch": "tsc --watch",
-    "serve": "tsc:watch && polymer serve",
+    "serve": "gulp serve",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": {

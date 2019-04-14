@@ -1,9 +1,10 @@
 import { customElement, html, LitElement, property } from 'lit-element';
 import { style } from './web-imageslider-style';
 
-interface ImageSlider{
-  src: String,
-  srcset?: String
+interface IImageSlider {
+  src: string,
+  srcset?: string,
+  class?: string
 }
 
 @customElement('web-imageslider')
@@ -12,7 +13,7 @@ export class WebImageSlider extends LitElement {
   @property({ type: Number }) time = 3;
   @property({ type: Boolean }) lazy = false;
 
-  private images: ImageSlider[];
+  private images: IImageSlider[] = [];
 
   static get styles () {
     return [style]
@@ -21,16 +22,20 @@ export class WebImageSlider extends LitElement {
   constructor(){
     super();
     this.querySelectorAll('img').forEach(i => {
-      console.log(i)
       this.images.push({ src: i.src });
     })
+    this.images[0].class = 'active';
   }
   
   firstUpdated() {
-    this._slide();
+    
   }
 
   _slide(){
+
+    this.images.forEach(img => {
+      
+    });
 
     // if (this.querySelectorAll('img').length>1){
     //   let active = this.querySelector('.active');
@@ -56,9 +61,7 @@ export class WebImageSlider extends LitElement {
   
   render() {
     return html`
-      ${ this.images.map(img => { 
-        
-       }) }
+      ${ this.images.map(img => html`<img src="${ img.src }" class="${ img.class }"/>`) }
     `;
   }
 }
